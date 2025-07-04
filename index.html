@@ -37,19 +37,31 @@
         </nav>
       </div>
       <div class="header__right card-container">
-        <button type="button" class="cart-btn" aria-label="View cart">
-          <img src="./images/icon-cart.svg" alt="" aria-hidden="true" />
-          <span class="cart-count hidden">0</span>
-        </button>
-        <div class="cart-modal">
-          <h2 class="cart-modal__title">Cart</h2>
-          <div class="cart-modal__content" id="cartModalContent">
-            <p class="cart-empty-message">Your cart is empty.</p>
+        <div class="cart-wrapper">
+          <button
+            type="button"
+            class="cart-btn"
+            aria-label="View cart"
+            aria-expanded="false"
+          >
+            <img src="./images/icon-cart.svg" alt="Shopping cart icon" />
+            <span class="cart-count hidden">0</span>
+          </button>
+          <div
+            class="cart-modal"
+            aria-modal="true"
+            role="dialog"
+            aria-labelledby="cart-title"
+          >
+            <h2 class="cart-modal__title" id="cart-title">Cart</h2>
+            <div class="cart-modal__content" id="cartModalContent">
+              <p class="cart-empty-message">Your cart is empty.</p>
+            </div>
           </div>
         </div>
         <img
           src="./images/image-avatar.png"
-          alt="User avatar"
+          alt="User profile picture"
           class="header__avatar"
         />
       </div>
@@ -158,19 +170,21 @@
       </ul>
     </nav>
 
-    <div class="lightbox-overlay" aria-hidden="true">
+    <div
+      class="lightbox-overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="lightbox-title"
+    >
       <div class="lightbox-content">
         <button
           type="button"
           class="lightbox-close-btn"
           aria-label="Close lightbox"
         >
-          <img
-            src="images/icon-close.svg"
-            alt=" close icon"
-            aria-hidden="true"
-          />
+          <img src="images/icon-close.svg" alt="Close lightbox" />
         </button>
+        <h2 id="lightbox-title" class="sr-only">Product image gallery</h2>
         <div class="lightbox-main-image-container">
           <button
             type="button"
