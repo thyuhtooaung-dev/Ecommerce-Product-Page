@@ -210,15 +210,15 @@ function setupEventListeners() {
   });
 
   // Cart
-  elements.cartBtn?.addEventListener("click", (e) => {
-    if (!e.target.closest(".cart-modal")) toggleCartModal();
+  elements.cartBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleCartModal();
   });
 
   document.addEventListener("click", (e) => {
     if (
-      elements.cartModal.classList.contains("open") &&
-      !e.target.closest(".cart-modal") &&
-      !e.target.closest(".cart-btn")
+      !e.target.closest(".cart-container") &&
+      elements.cartModal.classList.contains("open")
     ) {
       toggleCartModal();
     }
