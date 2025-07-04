@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <button type="button" class="menu-btn" aria-label="Open menu">
+          <img src="./images/icon-menu.svg" alt="" aria-hidden="true" />
+        </button>
+        <img src="./images/logo.svg" alt="Sneakers logo" class="header__logo" />
+        <nav class="desktop-nav">
+          <ul class="desktop-nav__list">
+            <li><a href="#" class="desktop-nav__link">Collections</a></li>
+            <li><a href="#" class="desktop-nav__link">Men</a></li>
+            <li><a href="#" class="desktop-nav__link">Women</a></li>
+            <li><a href="#" class="desktop-nav__link">About</a></li>
+            <li><a href="#" class="desktop-nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <button type="button" class="cart-btn" aria-label="View cart">
+          <img src="./images/icon-cart.svg" alt="" aria-hidden="true" />
+          <span class="cart-count hidden">0</span>
+          <div class="cart-modal">
+            <h2 class="cart-modal__title">Cart</h2>
+            <div class="cart-modal__content" id="cartModalContent">
+              <p class="cart-empty-message">Your cart is empty.</p>
+            </div>
+          </div>
+        </button>
+        <img
+          src="./images/image-avatar.png"
+          alt="User avatar"
+          class="header__avatar"
+        />
+      </div>
+    </header>
+
+    <main class="product-main">
+      <section class="product-gallery">
+        <div class="main-image-container">
+          <button type="button" class="prev-btn" aria-label="Previous image">
+            <img src="./images/icon-previous.svg" alt="" aria-hidden="true" />
+          </button>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Sneaker product image 1"
+            class="main-product-image"
+            data-index="0"
+          />
+          <button type="button" class="next-btn" aria-label="Next image">
+            <img src="./images/icon-next.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+        <div class="thumbnails-container">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="Thumbnail 1"
+            class="thumbnail active"
+            data-index="0"
+          />
+          <img
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="Thumbnail 2"
+            class="thumbnail"
+            data-index="1"
+          />
+          <img
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="Thumbnail 3"
+            class="thumbnail"
+            data-index="2"
+          />
+          <img
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="Thumbnail 4"
+            class="thumbnail"
+            data-index="3"
+          />
+        </div>
+      </section>
+
+      <section class="product-details">
+        <p class="company-name">SNEAKER COMPANY</p>
+        <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+        <p class="product-description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price-info">
+          <div class="current-price-group">
+            <span class="current-price">$125.00</span>
+            <span class="discount-badge">50%</span>
+          </div>
+          <span class="original-price">$250.00</span>
+        </div>
+        <div class="actions">
+          <div class="quantity-selector">
+            <button
+              type="button"
+              class="minus-btn"
+              aria-label="Decrease quantity"
+            >
+              <img src="./images/icon-minus.svg" alt="" aria-hidden="true" />
+            </button>
+            <span class="quantity-display">0</span>
+            <button
+              type="button"
+              class="plus-btn"
+              aria-label="Increase quantity"
+            >
+              <img src="./images/icon-plus.svg" alt="" aria-hidden="true" />
+            </button>
+          </div>
+          <button type="button" class="add-to-cart-btn">
+            <img src="./images/icon-cart.svg" alt="" aria-hidden="true" />
+            Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+      <button type="button" class="close-menu-btn" aria-label="Close menu">
+        <img
+          src="./images/icon-close.svg"
+          alt="Cross btn icon"
+          aria-hidden="true"
+        />
+      </button>
+      <ul class="mobile-menu__list">
+        <li><a href="#" class="mobile-menu__link">Collections</a></li>
+        <li><a href="#" class="mobile-menu__link">Men</a></li>
+        <li><a href="#" class="mobile-menu__link">Women</a></li>
+        <li><a href="#" class="mobile-menu__link">About</a></li>
+        <li><a href="#" class="mobile-menu__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="lightbox-overlay" aria-hidden="true">
+      <div class="lightbox-content">
+        <button
+          type="button"
+          class="lightbox-close-btn"
+          aria-label="Close lightbox"
+        >
+          <img
+            src="images/icon-close.svg"
+            alt=" close icon"
+            aria-hidden="true"
+          />
+        </button>
+        <div class="lightbox-main-image-container">
+          <button
+            type="button"
+            class="lightbox-prev-btn"
+            aria-label="Previous image"
+          >
+            <img src="./images/icon-previous.svg" alt="" aria-hidden="true" />
+          </button>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Sneaker product image 1"
+            class="lightbox-main-product-image"
+            data-index="0"
+          />
+          <button
+            type="button"
+            class="lightbox-next-btn"
+            aria-label="Next image"
+          >
+            <img src="./images/icon-next.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+        <div class="lightbox-thumbnails-container">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="Thumbnail 1"
+            class="lightbox-thumbnail active"
+            data-index="0"
+          />
+          <img
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="Thumbnail 2"
+            class="lightbox-thumbnail"
+            data-index="1"
+          />
+          <img
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="Thumbnail 3"
+            class="lightbox-thumbnail"
+            data-index="2"
+          />
+          <img
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="Thumbnail 4"
+            class="lightbox-thumbnail"
+            data-index="3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a target="_blank" href="https://github.com/ThyuHtooAungOwO">PoungMont</a
+      >.
+    </footer>
+  </body>
+</html>
