@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-> LiveSiteUrl: **Ecommerce Product Page** on [GitHub Pages](https://thyuhtooaungowo.github.io/Ecommerce-Product-Page/)
+> LiveSiteUrl: **Ecommerce Product Page** on [GitHub Pages](https://thyuhtooaung-dev.github.io/Ecommerce-Product-Page/)
 
 ### Built with
 
